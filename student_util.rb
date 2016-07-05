@@ -2,8 +2,6 @@ require "json"
 require "awesome_print"
 # require "./core_extensions/array"
 
-require "byebug"
-
 # @TODO Move this monkey patch into core extensions
 class Array
   def chunk(pieces)
@@ -23,7 +21,6 @@ class Array
 end
 
 class StudentUtil
-
   def initialize
     students_file = File.read("cohorts/pangolins.json")
     students_hash = JSON.parse(students_file)
