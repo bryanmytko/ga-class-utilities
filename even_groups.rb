@@ -1,5 +1,5 @@
-require "byebug"
 require "json"
+require "awesome_print"
 
 class Array
   def chunk(pieces)
@@ -27,4 +27,4 @@ instructors_hash = JSON.parse(instructors_file)
 instructors = instructors_hash["instructors"]
 
 groups = students.shuffle.chunk instructors.size
-p instructors.shuffle.zip(groups)
+ap instructors.zip(groups)

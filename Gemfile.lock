@@ -1,5 +1,6 @@
 GEM
   specs:
+    awesome_print (1.6.1)
     byebug (9.0.5)
     json (1.8.3)
 
@@ -7,6 +8,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   byebug
   json
 
