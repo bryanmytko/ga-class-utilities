@@ -6,3 +6,5 @@
 Gemfile.lock
 
 /cohorts
+
+.byebug_history
