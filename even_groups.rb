@@ -1,3 +1,6 @@
+require "byebug"
+require "json"
+
 class Array
   def chunk(pieces)
     pieces ||= 2
@@ -15,8 +18,13 @@ class Array
   end
 end
 
-students = %w()
-instructors = %w()
+students_file = File.read("cohorts/pangolins.json")
+students_hash = JSON.parse(students_file)
+students = students_hash["students"]
+
+instructors_file = File.read("cohorts/instructors.json")
+instructors_hash = JSON.parse(instructors_file)
+instructors = instructors_hash["instructors"]
 
 groups = students.shuffle.chunk instructors.size
 p instructors.shuffle.zip(groups)
