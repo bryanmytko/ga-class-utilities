@@ -1,26 +1,9 @@
 require "json"
-require "awesome_print"
-# require "./core_extensions/array"
-
-# @TODO Move this monkey patch into core extensions
-class Array
-  def chunk(pieces)
-    pieces ||= 2
-    len = self.length
-    mid = (len / pieces)
-    chunks = []
-    start = 0
-    1.upto(pieces) do |i|
-      last = start+mid
-      last = last - 1 unless len % pieces >= i
-      chunks << self[start..last] || []
-      start = last + 1
-    end
-    chunks
-  end
-end
+require "./core_extensions/array"
 
 class StudentUtil
+  Array.include CoreExtensions::Array
+
   def initialize(students_data, instructors_data)
     students_file = File.read(students_data)
     students_hash = JSON.parse(students_file)
@@ -33,6 +16,6 @@ class StudentUtil
 
   def even_groups_per_instructor
     groups = @students.shuffle.chunk(@instructors.size)
-    ap @instructors.zip(groups)
+    @instructors.zip(groups)
   end
 end

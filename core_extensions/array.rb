@@ -1,7 +1,6 @@
 module CoreExtensions
-  class Array
+  module Array
     def chunk(pieces)
-      debugger
       pieces ||= 2
       len = self.length
       mid = (len / pieces)
