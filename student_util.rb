@@ -21,12 +21,12 @@ class Array
 end
 
 class StudentUtil
-  def initialize
-    students_file = File.read("cohorts/pangolins.json")
+  def initialize(students_data, instructors_data)
+    students_file = File.read(students_data)
     students_hash = JSON.parse(students_file)
     @students = students_hash["students"]
 
-    instructors_file = File.read("cohorts/instructors.json")
+    instructors_file = File.read(instructors_data)
     instructors_hash = JSON.parse(instructors_file)
     @instructors = instructors_hash["instructors"]
   end
