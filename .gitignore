@@ -8,3 +8,5 @@ Gemfile.lock
 /data
 
 .byebug_history
+
+.env
