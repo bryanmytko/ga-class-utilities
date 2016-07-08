@@ -33,7 +33,7 @@ students.json
 
     s = StudentUtil.new(students, instructors)
 
-_Create even groups for each instructor:_
+__Create even groups for each instructor:__
 
     s.even_groups_per_instructor
 
@@ -56,8 +56,8 @@ squadname.json
     require './squad_util';
     su = SquadUtil.new('data/squadname.json')
 
-_Clone squad repos:_
+__Clone squad repos:__
 
-__This assumes you have access to clone these repositories__
+_Note: This assumes you have access to clone these repositories_
 
     su.clone_squad_repos('/Users/yourname/Desktop')
