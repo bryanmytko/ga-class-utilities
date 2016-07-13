@@ -1,0 +1,7 @@
+{
+  "repo": "test-repo",
+  "squad": [
+    { "name": "Jane Doe", "github": "jdoe123" },
+    { "name": "John Doe", "github": "jdoe321" }
+  ]
+}
